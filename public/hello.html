@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  function upload(param) {
+    $.ajax({
+      url:'/upload',
+      data:{
+        a:1232,
+        b:1232,
+        c:1232,
+        d:1232,
+        e:1232,
+        type:param
+      },
+    })
+  }
+  window.onunload=function () {
+    upload('onunload')
+    console.log('onunload');
+  }
+
+  window.onbeforeunload=function () {
+    upload('onbeforeunload');
+    console.log('onbeforeunload')
+  }
+</script>
+</body>
+</html>
